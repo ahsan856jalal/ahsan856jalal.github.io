@@ -3,204 +3,542 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahsan Jalal | CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Ahsan Jalal | Machine Learning & AI Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #2563eb;
-      --bg: #f9fafb;
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --highlight: #e94560;
+      --text-light: #f0f0f0;
+      --text-dark: #333333;
       --card-bg: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
+      --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      --transition: all 0.3s ease;
     }
-
-    body {
-      font-family: 'Poppins', sans-serif;
+    
+    * {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--text-dark);
       line-height: 1.6;
     }
-
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header Styles */
     header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--text-light);
+      padding: 3rem 2rem;
       text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, #2563eb, #1e3a8a);
-      color: white;
+      position: relative;
+      overflow: hidden;
     }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230f3460' fill-opacity='0.2' d='M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
     }
-
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+    
     header h1 {
-      margin: 1rem 0 0.5rem;
-      font-size: 2rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
     }
-
-    header p {
-      margin: 0.3rem 0;
-      font-size: 1rem;
+    
+    .title {
+      font-size: 1.2rem;
+      color: var(--highlight);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
     }
-
-    .links a {
-      display: inline-block;
-      margin: 0.4rem;
-      padding: 0.5rem 1rem;
-      background: rgba(255,255,255,0.15);
-      border-radius: 25px;
-      color: white;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .links a:hover {
-      background: white;
-      color: var(--primary);
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    section {
-      background: var(--card-bg);
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    section h2 {
-      margin-top: 0;
-      color: var(--primary);
-      font-size: 1.3rem;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
-    }
-
-    ul { padding-left: 1.2rem; }
-
-    .two-col {
+    
+    .contact-info {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 1.5rem;
+      margin-bottom: 1.5rem;
     }
-    .two-col div {
+    
+    .contact-info a {
+      color: var(--text-light);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+    
+    .contact-info a:hover {
+      color: var(--highlight);
+      transform: translateY(-2px);
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-light);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--highlight);
+      transform: translateY(-3px);
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+      height: 100%;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--highlight);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .card h2 i {
+      color: var(--highlight);
+    }
+    
+    /* Summary Section */
+    .summary {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .summary p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    
+    /* List Styles */
+    ul {
+      list-style-type: none;
+    }
+    
+    ul li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    
+    ul li::before {
+      content: '•';
+      color: var(--highlight);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .timeline-item {
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--highlight);
+    }
+    
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 18px;
+      width: 2px;
+      height: calc(100% + 10px);
+      background: var(--accent);
+      opacity: 0.3;
+    }
+    
+    .timeline-item h3 {
+      color: var(--secondary);
+      margin-bottom: 0.3rem;
+    }
+    
+    .timeline-item .date {
+      color: var(--highlight);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    /* Skills Section */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .skill-category {
       flex: 1;
-      min-width: 200px;
+      min-width: 250px;
     }
-
+    
+    .skill-category h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .skill-tag {
+      display: inline-block;
+      background: rgba(15, 52, 96, 0.1);
+      color: var(--accent);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    
+    .skill-tag:hover {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    /* Publications */
+    .publication {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .publication:last-child {
+      border-bottom: none;
+    }
+    
+    .publication-title {
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 0.3rem;
+    }
+    
+    .publication-journal {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 0.3rem;
+    }
+    
+    /* Hobbies */
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .hobby {
+      display: flex;
+      align-items: center;
+      background: rgba(15, 52, 96, 0.08);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: var(--transition);
+    }
+    
+    .hobby:hover {
+      background: rgba(15, 52, 96, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .hobby i {
+      margin-right: 0.5rem;
+      color: var(--highlight);
+    }
+    
+    /* Footer */
     footer {
       text-align: center;
+      padding: 1.5rem;
+      background: var(--primary);
+      color: var(--text-light);
       font-size: 0.9rem;
-      color: var(--muted);
-      padding: 2rem 1rem;
     }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
-      section { padding: 1rem 1.2rem; }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .card {
+        padding: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="profile.jpg" alt="Ahsan Jalal">
-    <h1>Ahsan Jalal</h1>
-    <p>Machine Learning Researcher | PhD Scholar | Computer Vision Specialist</p>
-    <p>
-      <a href="mailto:ahsan856jalal@gmail.com">ahsan856jalal@gmail.com</a> · 
-      <a href="tel:+923335240325">+92 333 524 0325</a>
-    </p>
-    <div class="links">
-      <a href="https://github.com/ahsan856jalal" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/ahsan-jalal-9a864984" target="_blank">LinkedIn</a>
+    <div class="header-content container">
+      <h1>Ahsan Jalal</h1>
+      <div class="title">Machine Learning & Artificial Intelligence Expert</div>
+      
+      <div class="contact-info">
+        <a href="mailto:ahsan856jalal@gmail.com">
+          <i class="fas fa-envelope"></i> ahsan856jalal@gmail.com
+        </a>
+        <a href="tel:+923335240325">
+          <i class="fas fa-phone"></i> +92 333 524 0325
+        </a>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/ahsan856jalal" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/ahsan-jalal-9a864984" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Summary</h2>
-      <p>Experienced Machine Learning and AI expert with deep expertise in computer vision, NLP, and data analytics. Strong research background with published work in top journals, skilled in developing state-of-the-art models for real-world impact.</p>
+  <main class="container">
+    <section class="card summary">
+      <h2><i class="fas fa-user"></i> Professional Summary</h2>
+      <p>Experienced Machine Learning and Artificial Intelligence expert skilled in advanced data analytics and cutting-edge technologies. Proven track record in designing and implementing state-of-the-art models to optimize business performance. Effective communicator, committed to staying current with the latest advancements.</p>
     </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <ul>
-        <li><b>Research Intern</b>, DFKI, Germany (2024) – Knowledge incorporation for cell segmentation.</li>
-        <li><b>Research Associate</b>, NCAI Deep Learning Lab (2019–Present) – Automated news report generation with NLP & ML.</li>
-        <li><b>Team Lead</b>, OptiMAL Lab, NUST (2018–2019) – Smart assistance system for visually impaired.</li>
-        <li><b>Research Assistant</b>, AUS (2016–2017) – Semi-supervised clustering & gender recognition (ACCV '16).</li>
-        <li><b>Research Assistant</b>, CEFAR & TUKL Lab, NUST (2014–2016) – Fish classification & detection systems.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><b>PhD</b>, Electrical Engineering, NUST, Pakistan (2019–Present, CGPA 4.0/4.0)</li>
-        <li><b>MS</b>, Electrical Engineering, AUS, UAE (2016–2017, CGPA 3.71/4.0)</li>
-        <li><b>BS</b>, Electrical Engineering, NUST, Pakistan (2010–2014, CGPA 3.47/4.0)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <div class="two-col">
-        <div>
-          <b>Technical</b>
-          <ul>
-            <li>Python, MATLAB</li>
-            <li>TensorFlow, DeepStream</li>
-            <li>MS Office, LaTeX</li>
-          </ul>
+    <div class="grid-container">
+      <section class="card">
+        <h2><i class="fas fa-briefcase"></i> Work History</h2>
+        <div class="timeline-item">
+          <div class="date">Jun 2024 – Jul 2024</div>
+          <h3>Research Intern</h3>
+          <p>DFKI, Kaiserslautern, Germany</p>
+          <p>Worked on knowledge incorporation to improve cell segmentation in LIVECell dataset.</p>
         </div>
-        <div>
-          <b>Research Areas</b>
-          <ul>
-            <li>Computer Vision & Deep Learning</li>
-            <li>Data Analytics & ML</li>
-            <li>Object Detection & Localization</li>
-            <li>Natural Language Processing</li>
-          </ul>
+        
+        <div class="timeline-item">
+          <div class="date">Jun 2019 – Present</div>
+          <h3>Research Associate</h3>
+          <p>NCAI Deep Learning Lab</p>
+          <p>Developed software for automated news report generation using NLP, ML, and DS.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="date">Jan 2018 – Jun 2019</div>
+          <h3>Team Lead</h3>
+          <p>OptiMAL Lab, NUST</p>
+          <p>Developed smart assistance system for visually impaired with object detection & audio guidance.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="date">Feb 2016 – Dec 2017</div>
+          <h3>Research Assistant</h3>
+          <p>American University of Sharjah</p>
+          <p>Worked on semi-supervised clustering of facial recognition (PR Letters), gender recognition (ACCV '16).</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="date">Jun 2014 – Feb 2016</div>
+          <h3>Research Assistant</h3>
+          <p>CEFAR & TUKL Lab, NUST</p>
+          <p>Worked on fish classification and detection systems.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="timeline-item">
+          <div class="date">2019 – Present</div>
+          <h3>PhD in Electrical Engineering</h3>
+          <p>SEECS, NUST, Pakistan (CGPA 4.0/4.0)</p>
+          <p>Topic: Machine learning based large-scale visual recognition.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="date">2016 – 2017</div>
+          <h3>MS in Electrical Engineering</h3>
+          <p>American University of Sharjah, UAE (CGPA 3.71/4.0)</p>
+          <p>Topic: Semi-Supervised clustering of Facial Expressions.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="date">2010 – 2014</div>
+          <h3>BS in Electrical Engineering</h3>
+          <p>SEECS, NUST, Pakistan (CGPA 3.47/4.0)</p>
+          <p>Topic: Object detection and classification for visually impaired people.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><i class="fas fa-star"></i> Awards & Achievements</h2>
+        <ul>
+          <li>Scholarships from NUST SEECS for GPA > 3.5/4.0</li>
+          <li>Scholarships from Board of Intermediate & Secondary Education, Rawalpindi</li>
+          <li>Graduate Teaching Assistant scholarship at AUS</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2><i class="fas fa-heart"></i> Hobbies</h2>
+        <div class="hobbies">
+          <div class="hobby"><i class="fas fa-plane"></i> Travelling</div>
+          <div class="hobby"><i class="fas fa-book"></i> Reading</div>
+          <div class="hobby"><i class="fas fa-gamepad"></i> Gaming</div>
+          <div class="hobby"><i class="fas fa-dumbbell"></i> Fitness</div>
+        </div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2><i class="fas fa-tools"></i> Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Technical</h3>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">MATLAB</div>
+          <div class="skill-tag">TensorFlow</div>
+          <div class="skill-tag">DeepStream</div>
+          <div class="skill-tag">MS Office</div>
+          <div class="skill-tag">LaTeX</div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Research Areas</h3>
+          <div class="skill-tag">Machine Learning</div>
+          <div class="skill-tag">Deep Learning</div>
+          <div class="skill-tag">Data Analytics</div>
+          <div class="skill-tag">Computer Vision</div>
+          <div class="skill-tag">Object Localization</div>
+          <div class="skill-tag">Natural Language Processing</div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Soft Skills</h3>
+          <div class="skill-tag">Teamwork</div>
+          <div class="skill-tag">Optimism</div>
+          <div class="skill-tag">Empathy</div>
+          <div class="skill-tag">Communication</div>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Publications</h2>
-      <ul>
-        <li><i>DeepFins: Capturing dynamics in underwater videos for fish detection</i>, Ecological Informatics, 2025.</li>
-        <li><i>Fish detection and species classification in underwater environments</i>, Ecological Informatics, 2020.</li>
-        <li><i>Semi-supervised clustering of unknown expressions</i>, Pattern Recognition Letters, 2019.</li>
-        <li><i>The LFW-gender dataset</i>, ACCV, 2016.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Awards</h2>
-      <ul>
-        <li>NUST SEECS GPA Scholarship</li>
-        <li>Rawalpindi Board Scholarship</li>
-        <li>Graduate Teaching Assistantship at AUS</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Hobbies</h2>
-      <p>Travelling · Reading · Gaming · Fitness</p>
+    <section class="card">
+      <h2><i class="fas fa-file-alt"></i> Publications</h2>
+      <div class="publication">
+        <div class="publication-title">DeepFins: Capturing dynamics in underwater videos for fish detection.</div>
+        <div class="publication-journal">Ecological Informatics 86 (2025): 103013.</div>
+        <div class="publication-authors">Jalal, A. et al.</div>
+      </div>
+      
+      <div class="publication">
+        <div class="publication-title">Fish detection and species classification in underwater environments using deep learning with temporal information.</div>
+        <div class="publication-journal">Ecological Informatics 57 (2020): 101088.</div>
+        <div class="publication-authors">Jalal, A. et al.</div>
+      </div>
+      
+      <div class="publication">
+        <div class="publication-title">Semi-supervised clustering of unknown expressions.</div>
+        <div class="publication-journal">PR Letters 120 (2019): 46–53.</div>
+        <div class="publication-authors">Jalal, A. & Tariq, U.</div>
+      </div>
+      
+      <div class="publication">
+        <div class="publication-title">The LFW-gender dataset.</div>
+        <div class="publication-journal">ACCV 2016.</div>
+        <div class="publication-authors">Jalal, A. & Tariq, U.</div>
+      </div>
+      
+      <div class="publication">
+        <div class="publication-title">Fish species classification in unconstrained underwater environments based on deep learning.</div>
+        <div class="publication-journal">Limnology and Oceanography: Methods 14(9), 2016.</div>
+        <div class="publication-authors">Salman, A. et al.</div>
+      </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Ahsan Jalal · Hosted on GitHub Pages
+    © 2025 Ahsan Jalal | Hosted on GitHub Pages
   </footer>
 </body>
 </html>
