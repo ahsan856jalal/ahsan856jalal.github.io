@@ -4,107 +4,150 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahsan Jalal | CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Inter', sans-serif; background: #f9fafb; color: #111; display: flex; min-height: 100vh; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    
-    /* Sidebar */
-    .sidebar {
-      width: 280px;
-      background: #1f2937;
+    :root {
+      --primary: #2563eb;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
       color: white;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-    .sidebar img {
-      width: 150px;
-      height: 150px;
+
+    header img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      border: 3px solid #60a5fa;
-      margin-bottom: 1rem;
+      border: 4px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-    .sidebar h1 {
-      margin: 0.5rem 0;
-      font-size: 1.5rem;
+
+    header h1 {
+      margin: 1rem 0 0.5rem;
+      font-size: 2rem;
     }
-    .sidebar p { margin: 0.2rem 0; font-size: 0.9rem; }
-    .sidebar .links a {
+
+    header p {
+      margin: 0.3rem 0;
+      font-size: 1rem;
+    }
+
+    .links a {
       display: inline-block;
-      margin: 0.3rem;
-      background: #374151;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
+      margin: 0.4rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.15);
+      border-radius: 25px;
+      color: white;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: 0.3s;
     }
-    
-    /* Main content */
-    .content {
-      flex: 1;
-      padding: 2rem;
-      overflow-y: auto;
+    .links a:hover {
+      background: white;
+      color: var(--primary);
     }
-    section { margin-bottom: 2rem; }
-    h2 {
-      font-size: 1.2rem;
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.3rem;
       border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.3rem;
-      margin-bottom: 0.8rem;
-      color: #1f2937;
+      padding-bottom: 0.5rem;
     }
-    ul { padding-left: 1.2rem; line-height: 1.6; }
-    .two-col { display: flex; flex-wrap: wrap; gap: 2rem; }
-    .two-col div { flex: 1; min-width: 200px; }
-    
-    /* Footer */
+
+    ul { padding-left: 1.2rem; }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .two-col div {
+      flex: 1;
+      min-width: 200px;
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      background: #f3f4f6;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      section { padding: 1rem 1.2rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="ahsan.jpg" alt="Ahsan Jalal">
+  <header>
+    <img src="profile.jpg" alt="Ahsan Jalal">
     <h1>Ahsan Jalal</h1>
-    <p><a href="mailto:ahsan856jalal@gmail.com">ahsan856jalal@gmail.com</a></p>
-    <p><a href="tel:+923335240325">+92 333 524 0325</a></p>
+    <p>Machine Learning Researcher | PhD Scholar | Computer Vision Specialist</p>
+    <p>
+      <a href="mailto:ahsan856jalal@gmail.com">ahsan856jalal@gmail.com</a> · 
+      <a href="tel:+923335240325">+92 333 524 0325</a>
+    </p>
     <div class="links">
       <a href="https://github.com/ahsan856jalal" target="_blank">GitHub</a>
       <a href="https://linkedin.com/in/ahsan-jalal-9a864984" target="_blank">LinkedIn</a>
     </div>
-  </div>
+  </header>
 
-  <!-- Main Content -->
-  <div class="content">
+  <main>
     <section>
       <h2>Summary</h2>
-      <p>Experienced Machine Learning and Artificial Intelligence expert skilled in advanced data analytics and cutting-edge technologies. Proven track record in designing and implementing state-of-the-art models to optimize business performance. Effective communicator, committed to staying current with the latest advancements.</p>
+      <p>Experienced Machine Learning and AI expert with deep expertise in computer vision, NLP, and data analytics. Strong research background with published work in top journals, skilled in developing state-of-the-art models for real-world impact.</p>
     </section>
 
     <section>
-      <h2>Work History</h2>
+      <h2>Work Experience</h2>
       <ul>
-        <li><b>Research Intern</b>, DFKI, Kaiserslautern, Germany (Jun 2024 – Jul 2024) – Worked on knowledge incorporation to improve cell segmentation in LIVECell dataset.</li>
-        <li><b>Research Associate</b>, NCAI Deep Learning Lab (Jun 2019 – Present) – Developed software for automated news report generation using NLP, ML, and DS.</li>
-        <li><b>Team Lead</b>, OptiMAL Lab, NUST (Jan 2018 – Jun 2019) – Developed smart assistance system for visually impaired using object detection & audio guidance.</li>
-        <li><b>Research Assistant</b>, American University of Sharjah (Feb 2016 – Dec 2017) – Worked on semi-supervised clustering of facial recognition, gender recognition (ACCV ‘16).</li>
-        <li><b>Research Assistant</b>, CEFAR & TUKL Lab, NUST (Jun 2014 – Feb 2016) – Fish classification and detection systems.</li>
+        <li><b>Research Intern</b>, DFKI, Germany (2024) – Knowledge incorporation for cell segmentation.</li>
+        <li><b>Research Associate</b>, NCAI Deep Learning Lab (2019–Present) – Automated news report generation with NLP & ML.</li>
+        <li><b>Team Lead</b>, OptiMAL Lab, NUST (2018–2019) – Smart assistance system for visually impaired.</li>
+        <li><b>Research Assistant</b>, AUS (2016–2017) – Semi-supervised clustering & gender recognition (ACCV '16).</li>
+        <li><b>Research Assistant</b>, CEFAR & TUKL Lab, NUST (2014–2016) – Fish classification & detection systems.</li>
       </ul>
     </section>
 
     <section>
       <h2>Education</h2>
       <ul>
-        <li><b>PhD</b> in Electrical Engineering, SEECS, NUST, Pakistan (2019 – Present, CGPA 4.0/4.0) – Machine learning based large-scale visual recognition.</li>
-        <li><b>MS</b> in Electrical Engineering, American University of Sharjah, UAE (2016 – 2017, CGPA 3.71/4.0) – Semi-Supervised clustering of Facial Expressions.</li>
-        <li><b>BS</b> in Electrical Engineering, SEECS, NUST, Pakistan (2010 – 2014, CGPA 3.47/4.0) – Object detection and classification for visually impaired people.</li>
+        <li><b>PhD</b>, Electrical Engineering, NUST, Pakistan (2019–Present, CGPA 4.0/4.0)</li>
+        <li><b>MS</b>, Electrical Engineering, AUS, UAE (2016–2017, CGPA 3.71/4.0)</li>
+        <li><b>BS</b>, Electrical Engineering, NUST, Pakistan (2010–2014, CGPA 3.47/4.0)</li>
       </ul>
     </section>
 
@@ -122,44 +165,42 @@
         <div>
           <b>Research Areas</b>
           <ul>
-            <li>Machine Learning, Deep Learning</li>
-            <li>Data Analytics, Computer Vision</li>
-            <li>Object Localization & Categorization</li>
+            <li>Computer Vision & Deep Learning</li>
+            <li>Data Analytics & ML</li>
+            <li>Object Detection & Localization</li>
             <li>Natural Language Processing</li>
           </ul>
         </div>
       </div>
-      <p><b>Soft Skills:</b> Teamwork, Optimism, Empathy</p>
     </section>
 
     <section>
       <h2>Publications</h2>
       <ul>
-        <li>DeepFins: Capturing dynamics in underwater videos for fish detection. <i>Ecological Informatics</i>, 86, 2025.</li>
-        <li>Fish detection and species classification in underwater environments using deep learning with temporal information. <i>Ecological Informatics</i>, 57, 2020.</li>
-        <li>Semi-supervised clustering of unknown expressions. <i>Pattern Recognition Letters</i>, 120, 2019.</li>
-        <li>The LFW-gender dataset. <i>ACCV</i>, 2016.</li>
-        <li>Fish species classification in unconstrained underwater environments based on deep learning. <i>Limnology & Oceanography: Methods</i>, 2016.</li>
+        <li><i>DeepFins: Capturing dynamics in underwater videos for fish detection</i>, Ecological Informatics, 2025.</li>
+        <li><i>Fish detection and species classification in underwater environments</i>, Ecological Informatics, 2020.</li>
+        <li><i>Semi-supervised clustering of unknown expressions</i>, Pattern Recognition Letters, 2019.</li>
+        <li><i>The LFW-gender dataset</i>, ACCV, 2016.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Awards & Achievements</h2>
+      <h2>Awards</h2>
       <ul>
-        <li>Scholarships from NUST SEECS for GPA > 3.5/4.0</li>
-        <li>Scholarships from Board of Intermediate & Secondary Education, Rawalpindi</li>
-        <li>Graduate Teaching Assistant scholarship at AUS</li>
+        <li>NUST SEECS GPA Scholarship</li>
+        <li>Rawalpindi Board Scholarship</li>
+        <li>Graduate Teaching Assistantship at AUS</li>
       </ul>
     </section>
 
     <section>
       <h2>Hobbies</h2>
-      <p>Travelling, Reading, Gaming, Fitness</p>
+      <p>Travelling · Reading · Gaming · Fitness</p>
     </section>
-  </div>
+  </main>
 
   <footer>
-    © 2025 Ahsan Jalal | Hosted on GitHub Pages
+    © 2025 Ahsan Jalal · Hosted on GitHub Pages
   </footer>
 </body>
 </html>
